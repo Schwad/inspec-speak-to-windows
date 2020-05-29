@@ -1,0 +1,29 @@
+I, [2020-05-29T13:46:57.302726 #48198]  INFO -- Kitchen: -----> Starting Test Kitchen (v2.5.1)
+E, [2020-05-29T13:46:57.302905 #48198] ERROR -- Kitchen: ------Exception-------
+E, [2020-05-29T13:46:57.302927 #48198] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2020-05-29T13:46:57.302940 #48198] ERROR -- Kitchen: Message: Kitchen YAML file /Users/nickschwaderer/Documents/inspec/gimme_windows_deux/root/kitchen.yml does not exist.
+E, [2020-05-29T13:46:57.302952 #48198] ERROR -- Kitchen: ----------------------
+E, [2020-05-29T13:46:57.302964 #48198] ERROR -- Kitchen: ------Backtrace-------
+E, [2020-05-29T13:46:57.302974 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/loader/yaml.rb:65:in `read'
+E, [2020-05-29T13:46:57.302985 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/config.rb:154:in `data'
+E, [2020-05-29T13:46:57.302996 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/config.rb:132:in `suites'
+E, [2020-05-29T13:46:57.303007 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/config.rb:184:in `filter_instances'
+E, [2020-05-29T13:46:57.303017 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/config.rb:143:in `build_instances'
+E, [2020-05-29T13:46:57.303028 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/config.rb:117:in `instances'
+E, [2020-05-29T13:46:57.303038 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/command.rb:112:in `filtered_instances'
+E, [2020-05-29T13:46:57.303049 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/command.rb:142:in `parse_subcommand'
+E, [2020-05-29T13:46:57.303060 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/command/action.rb:35:in `block in call'
+E, [2020-05-29T13:46:57.303070 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.rubies/ruby-2.6.6/lib/ruby/2.6.0/benchmark.rb:293:in `measure'
+E, [2020-05-29T13:46:57.303081 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/command/action.rb:34:in `call'
+E, [2020-05-29T13:46:57.303092 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/cli.rb:52:in `perform'
+E, [2020-05-29T13:46:57.303103 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/cli.rb:198:in `block (2 levels) in <class:CLI>'
+E, [2020-05-29T13:46:57.303113 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/thor-0.20.3/lib/thor/command.rb:27:in `run'
+E, [2020-05-29T13:46:57.303124 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/thor-0.20.3/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2020-05-29T13:46:57.303134 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/thor-0.20.3/lib/thor.rb:387:in `dispatch'
+E, [2020-05-29T13:46:57.303145 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/thor-0.20.3/lib/thor/base.rb:466:in `start'
+E, [2020-05-29T13:46:57.303155 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2020-05-29T13:46:57.303181 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2020-05-29T13:46:57.303192 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/gems/test-kitchen-2.5.1/bin/kitchen:13:in `<top (required)>'
+E, [2020-05-29T13:46:57.303203 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/bin/kitchen:23:in `load'
+E, [2020-05-29T13:46:57.303213 #48198] ERROR -- Kitchen: /Users/nickschwaderer/.gem/ruby/2.6.6/bin/kitchen:23:in `<main>'
+E, [2020-05-29T13:46:57.303258 #48198] ERROR -- Kitchen: ----End Backtrace-----
