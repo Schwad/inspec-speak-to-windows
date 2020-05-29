@@ -1,0 +1,59 @@
+---
+driver:
+  name: ec2
+  # shared_credentials_profile: partner-engineering
+  region: us-west-2
+  # This security group is in the Chef Partner account
+  # TODO: Make the account used for testing configurable
+  # security_group_ids: ['sg-90712bef']
+  interface: dns
+  associate_public_ip: true
+  aws_ssh_key_id: schwad-inspec-windows
+  block_device_mappings:
+  - device_name: /dev/sda1
+    ebs:
+      volume_size: 30
+      delete_on_termination: true
+
+transport:
+  ssh_key: ~/.ssh/id_rsa.pub
+
+provisioner:
+  name: chef_zero
+  deprecations_as_errors: false
+  chef_license: accept
+
+verifier:
+  name: inspec
+
+platforms:
+  # - name: ubuntu-18.04
+  # - name: centos-8
+  - name: windows-2012r2
+    transport:
+      name: winrm
+      elevated: true
+    driver:
+      # with the default of 60 (300 seconds total) Windows instance
+      # creation often times out
+      retryable_tries: 240
+      image-id: ami-651f811d
+      instance_type: t3.large
+
+  - name: windows-2016
+    transport:
+      name: winrm
+      elevated: true
+    driver:
+      # with the default of 60 (300 seconds total) Windows instance
+      # creation often times out
+      retryable_tries: 240
+      image-id: ami-f3dcbc8b
+      instance_type: t3.large
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
